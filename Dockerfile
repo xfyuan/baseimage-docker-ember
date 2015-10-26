@@ -25,11 +25,12 @@ RUN npm install -g phantomjs
 RUN \
 	git clone https://github.com/facebook/watchman.git &&\
 	cd watchman &&\
-	git checkout v3.5.0 &&\
+	git checkout v4.1.0 &&\
 	./autogen.sh &&\
 	./configure &&\
 	make &&\
-	make install
+	make install &&\
+  cd .. && rm -rf watchman
 
 
 # =======================
