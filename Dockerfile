@@ -10,7 +10,7 @@ CMD ["/sbin/my_init"]
 # Install basic stuff
 # ===================
 RUN apt-get -qq update
-RUN apt-get -y install build-essential
+RUN apt-get install -y automake
 
 # ===================================
 # install ember-cli, bower, phantomjs
