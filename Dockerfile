@@ -6,6 +6,12 @@ ENV HOME /root
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
+# ===================
+# Install basic stuff
+# ===================
+RUN apt-get -qq update
+RUN apt-get -y install build-essential
+
 # ===================================
 # install ember-cli, bower, phantomjs
 # ===================================
